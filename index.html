@@ -21,7 +21,8 @@
 
     img {
       max-width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
+      display: block;
     }
 
     .muted {
@@ -37,16 +38,16 @@
       text-decoration: underline;
     }
 
-    /* Photo grid for wiring images */
+    ul {
+      margin-left: 20px;
+    }
+
+    /* Grids for photo sections */
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
-      margin: 12px 0 20px;
-    }
-
-    .photo-grid img {
-      width: 100%;
+      margin: 12px 0 18px;
     }
 
     @media (max-width: 700px) {
@@ -55,8 +56,24 @@
       }
     }
 
-    ul {
-      margin-left: 20px;
+    /* Photo card w/ caption */
+    .photo-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 10px;
+      background: #fff;
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .subnote {
+      margin: 6px 0 0;
+      color: #555;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -64,7 +81,7 @@
 
 <h1>Mechatronics Robot (2025)</h1>
 <p class="muted">
-Autonomous robot designed for a <em>Dune 2</em>-themed competition.
+  Autonomous robot designed for a <em>Dune 2</em>-themed competition.
 </p>
 
 <h2>Overview</h2>
@@ -80,26 +97,51 @@ Autonomous robot designed for a <em>Dune 2</em>-themed competition.
 <img src="media/robot_overview.jpg" alt="Mechatronics robot overview">
 
 <h3>Wiring</h3>
+<p class="subnote">Won "Best Wiring" Award</p>
 <div class="photo-grid">
-  <img src="media/wiring1.jpg" alt="Robot wiring overview">
-  <img src="media/wiring2.jpg" alt="Arduino and motor driver wiring">
-  <img src="media/wiring3.jpg" alt="Sensor and power wiring">
+  <div class="photo-card">
+    <img src="media/wiring1.jpg" alt="Robot wiring photo 1">
+  </div>
+  <div class="photo-card">
+    <img src="media/wiring2.jpg" alt="Robot wiring photo 2">
+  </div>
+  <div class="photo-card">
+    <img src="media/wiring3.jpg" alt="Robot wiring photo 3">
+  </div>
+</div>
+
+<h3>Manufacturing of Robot</h3>
+<div class="photo-grid">
+  <div class="photo-card">
+    <img src="media/manrobo1.jpg" alt="Manufacturing photo 1">
+    <div class="caption">Laser cut and FDM 3D printed parts</div>
+  </div>
+
+  <div class="photo-card">
+    <img src="media/manrobo2.jpg" alt="Manufacturing photo 2">
+    <div class="caption">Brass Rods made on Lathe</div>
+  </div>
+
+  <div class="photo-card">
+    <img src="media/manrobo3.jpg" alt="Manufacturing photo 3">
+    <div class="caption">Attached color sensor on 3D printed and assembled arm</div>
+  </div>
 </div>
 
 <h2>Video Demos</h2>
 <ul>
   <li>
-    <a href="https://youtu.be/YOUR_VIDEO_LINK_1" target="_blank">
+    <a href="https://youtu.be/YOUR_VIDEO_LINK_1" target="_blank" rel="noopener">
       Basic robot movement →
     </a>
   </li>
   <li>
-    <a href="https://youtu.be/YOUR_VIDEO_LINK_2" target="_blank">
+    <a href="https://youtu.be/YOUR_VIDEO_LINK_2" target="_blank" rel="noopener">
       Early PID line following →
     </a>
   </li>
   <li>
-    <a href="https://youtu.be/YOUR_VIDEO_LINK_3" target="_blank">
+    <a href="https://youtu.be/YOUR_VIDEO_LINK_3" target="_blank" rel="noopener">
       Block pickup and dump →
     </a>
   </li>
@@ -107,7 +149,7 @@ Autonomous robot designed for a <em>Dune 2</em>-themed competition.
 
 <h2>Source Code</h2>
 <p>
-  <a href="https://github.com/SantoGezelin/mechrobot" target="_blank">
+  <a href="https://github.com/SantoGezelin/mechrobot" target="_blank" rel="noopener">
     View GitHub repository →
   </a>
 </p>
